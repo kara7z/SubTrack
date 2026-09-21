@@ -1,20 +1,20 @@
-package src.ui;
+package ui;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
-import src.dao.AbonnementDAO;
-import src.dao.PaiementDAO;
-import src.enums.AbonnementStatus;
-import src.enums.PaiementStatus;
-import src.enums.TypePaiement;
-import src.models.Abonnement;
-import src.models.AbonnementAvecEngagement;
-import src.models.Paiement;
-import src.services.AbonnementService;
-import src.services.PaiementService;
-import src.util.DateUtil;
+import dao.AbonnementDAO;
+import dao.PaiementDAO;
+import enums.AbonnementStatus;
+import enums.PaiementStatus;
+import enums.TypePaiement;
+import models.Abonnement;
+import models.AbonnementAvecEngagement;
+import models.Paiement;
+import services.AbonnementService;
+import services.PaiementService;
+import util.DateUtil;
 
 public class ConsoleMenu {
   private Scanner sc = new Scanner(System.in);

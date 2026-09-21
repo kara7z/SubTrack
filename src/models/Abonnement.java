@@ -1,6 +1,6 @@
-package src.models;
+package models;
 
-import src.enums.AbonnementStatus;
+import enums.AbonnementStatus;
 import java.time.LocalDate;
 import java.util.UUID;
 

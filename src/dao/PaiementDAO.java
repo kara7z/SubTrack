@@ -1,12 +1,13 @@
-package src.dao;
+package dao;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import src.enums.PaiementStatus;
-import src.models.Paiement;
+import enums.PaiementStatus;
+import models.Paiement;
 
 public class PaiementDAO {
   private List<Paiement> paiements = new ArrayList<Paiement>();
@@ -92,7 +93,7 @@ public class PaiementDAO {
   }
 
   private static class LocalDateSafe {
-    java.time.LocalDate value;
+    LocalDate value;
     LocalDateSafe(Paiement p) {
       if (p.getDatePaiement() != null) {
         value = p.getDatePaiement();

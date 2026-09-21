@@ -1,7 +1,7 @@
-package src.models;
+package models;
 
 import java.time.LocalDate;
-import src.enums.AbonnementStatus;
+import enums.AbonnementStatus;
 
 public class AbonnementSansEngagement extends Abonnement {
   public AbonnementSansEngagement(String nomService, double montantMensuel,

@@ -1,15 +1,16 @@
-package src.services;
+package services;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import src.dao.AbonnementDAO;
-import src.dao.PaiementDAO;
-import src.enums.PaiementStatus;
-import src.enums.TypePaiement;
-import src.models.Abonnement;
-import src.models.AbonnementAvecEngagement;
-import src.models.Paiement;
+import java.util.stream.Collectors;
+import dao.AbonnementDAO;
+import dao.PaiementDAO;
+import enums.PaiementStatus;
+import enums.TypePaiement;
+import models.Abonnement;
+import models.AbonnementAvecEngagement;
+import models.Paiement;
 
 public class PaiementService {
   private PaiementDAO payDao;
@@ -74,7 +75,7 @@ public class PaiementService {
           Optional<Abonnement> a = aboDao.findById(p.getIdAbonnement());
           return a.isPresent() && a.get() instanceof AbonnementAvecEngagement;
         })
-        .collect(java.util.stream.Collectors.toList());
+        .collect(Collectors.toList());
   }
 
   public double totalImpayeAvecEngagement() {
@@ -100,7 +101,7 @@ public class PaiementService {
           return d2.compareTo(d1);
         })
         .limit(5)
-        .collect(java.util.stream.Collectors.toList());
+        .collect(Collectors.toList());
   }
 
   public double totalPayeForMonth(int year, int month) {

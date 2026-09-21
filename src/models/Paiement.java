@@ -1,9 +1,9 @@
-package src.models;
+package models;
 
 import java.time.LocalDate;
 import java.util.UUID;
-import src.enums.PaiementStatus;
-import src.enums.TypePaiement;
+import enums.PaiementStatus;
+import enums.TypePaiement;
 
 public class Paiement {
   private String idPaiement;
